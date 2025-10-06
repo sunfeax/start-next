@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Sixtyfour } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+const sixtyfour = Sixtyfour({
+  variable: "--font-sixtyfour",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 const geistMono = Geist_Mono({
@@ -25,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col gap-10`}
+        className={`${geistSans.variable} ${geistMono.variable} ${sixtyfour.variable} antialiased flex flex-col gap-10`}
       >
         <div className="rounded-md bg-blue-300 border-blue-900 max-w-full h-16 text-3xl flex items-center justify-center border-2">RootLayout</div>
         {children}

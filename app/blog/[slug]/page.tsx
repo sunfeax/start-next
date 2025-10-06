@@ -8,5 +8,5 @@ export default async function BlogPostPage({
   const { productId } = await params
   return (
     <div>My Post: {productId}</div>
- );
+  );
 }
