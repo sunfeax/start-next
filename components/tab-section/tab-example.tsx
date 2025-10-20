@@ -2,14 +2,17 @@ import { useState } from 'react';
 import TabButton from './tab-button';
 import { EXAMPLES } from '@/scripts/data';
 
-export default function TabExample() {
-    const [selectedTab, setSelectedTab] = useState('state');
+const TabExample = () => {
+    // creamos un estado para almacenar el tab seleccionado
+    const [selectedTab, setSelectedTab] = useState('state'); // "state" es el tab por defecto
 
+    // creamos una función para manejar el cambio de tab
     const handleTabChange = (tabName: string) => {
         setSelectedTab(tabName);
     };
 
-    const tabs = Object.keys(EXAMPLES);
+    // creamos un array con los nombres de los tabs
+    const tabs = Object.keys(EXAMPLES); // ["components", "props", "state"]
 
     return (
         <div className="p-4 bg-slate-800 rounded-lg">
@@ -40,3 +43,5 @@ export default function TabExample() {
         </div>
     );
 }
+
+export default TabExample;

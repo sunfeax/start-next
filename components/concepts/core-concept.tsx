@@ -7,7 +7,7 @@ type CoreConceptProps = {
     image: StaticImageData;
 };
 
-export default function CoreConcept({ title, description, image }: CoreConceptProps) {
+const CoreConcept = ({ title, description, image }: CoreConceptProps) => {
     return (
         <li className="flex flex-col items-center justify-center">
             <Image src={image} alt={title} className="w-32 h-auto" />
@@ -16,3 +16,5 @@ export default function CoreConcept({ title, description, image }: CoreConceptPr
         </li>
     );
 }
+
+export default CoreConcept;

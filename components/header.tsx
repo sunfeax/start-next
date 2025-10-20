@@ -1,7 +1,7 @@
 import logoHeader from "@/public/react-core-concepts.png";
 import Image from "next/image";
 
-export default function Header() {
+const Header = () => {
   return (
     <header className="flex-col w-full flex items-center justify-center p-4 gap-5">
       <Image
@@ -17,3 +17,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header
